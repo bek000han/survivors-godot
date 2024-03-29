@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://chy7vhwc8mk1c" path="res://sprites/animation_sprites/idle/tile000.png.PNG" id="3_5pba2"]
 [ext_resource type="Texture2D" uid="uid://bx0upwrqjtu5p" path="res://sprites/animation_sprites/jump/tile000.png" id="3_cgdwq"]
 [ext_resource type="Texture2D" uid="uid://dptp6iup0h4c5" path="res://sprites/animation_sprites/attack1/tile000.png.png" id="3_e587x"]
-[ext_resource type="Texture2D" uid="uid://c0cjglrc760oo" path="res://sprites/animation_sprites/attack1/tile004.png.png" id="3_gg8sb"]
 [ext_resource type="Texture2D" uid="uid://c1rdqmcie6br8" path="res://sprites/animation_sprites/idle/tile001.png.PNG" id="4_feewg"]
 [ext_resource type="Texture2D" uid="uid://cep34sl2ishqq" path="res://sprites/animation_sprites/idle/tile002.png.PNG" id="5_vldwm"]
 [ext_resource type="Texture2D" uid="uid://bj0r2is5yglph" path="res://sprites/animation_sprites/idle/tile003.png.PNG" id="6_wecds"]
@@ -21,9 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://bf6752i22otnr" path="res://sprites/animation_sprites/attack1/tile001.png.png" id="16_7lmoq"]
 [ext_resource type="Texture2D" uid="uid://ch3kaudrf1jo4" path="res://sprites/animation_sprites/attack1/tile002.png.png" id="17_mnt22"]
 [ext_resource type="Texture2D" uid="uid://b0eke6incybwl" path="res://sprites/animation_sprites/attack1/tile003.png.png" id="18_27elq"]
+[ext_resource type="Texture2D" uid="uid://dnwqifv2hhflh" path="res://sprites/animation_sprites/attack1/tile004.png" id="21_h680g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ckrw"]
-size = Vector2(26.383, 61.7021)
+size = Vector2(26.383, 64.2553)
 
 [sub_resource type="Animation" id="Animation_2myrw"]
 resource_name = "Idle"
@@ -89,7 +89,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("3_e587x"), ExtResource("16_7lmoq"), ExtResource("17_mnt22"), ExtResource("18_27elq"), ExtResource("3_gg8sb")]
+"values": [ExtResource("3_e587x"), ExtResource("16_7lmoq"), ExtResource("17_mnt22"), ExtResource("18_27elq"), ExtResource("21_h680g")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -152,10 +152,10 @@ movement_data = ExtResource("2_n1mpo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-5.10638, -7.65958)
-texture = ExtResource("9_b1abw")
+texture = ExtResource("21_h680g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-9.3617, -8.7234)
+position = Vector2(-9.3617, -7.44681)
 shape = SubResource("RectangleShape2D_3ckrw")
 
 [node name="CoyoteJumpTimer" type="Timer" parent="."]

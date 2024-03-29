@@ -13,7 +13,7 @@ var air_jump = false
 @onready var start_pos = global_position
 
 func _process(delta):
-	if Input.is_action_just_pressed("attack1"):
+	if Input.is_action_just_pressed("attack1")  and is_on_floor():
 		attack()
 
 func _physics_process(delta):
@@ -27,8 +27,7 @@ func _physics_process(delta):
 	apply_air_resistance(input_axis, delta)
 	update_animations(input_axis)
 	var was_on_floor = is_on_floor()
-	
-	move_and_slide()
+	if !attacking: move_and_slide()
 	
 	var just_left_ledge = was_on_floor and not is_on_floor() and velocity.y >= 0
 	if (just_left_ledge):

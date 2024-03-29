@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0cjglrc760oo"
-path="res://.godot/imported/tile004.png.png-44317bbeaec955fd7acbc1830dc368e3.ctex"
+uid="uid://dnwqifv2hhflh"
+path="res://.godot/imported/tile004.png-614fdd065332939aa21c2b8c94382872.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/animation_sprites/attack1/tile004.png.png"
-dest_files=["res://.godot/imported/tile004.png.png-44317bbeaec955fd7acbc1830dc368e3.ctex"]
+source_file="res://sprites/animation_sprites/attack1/tile004.png"
+dest_files=["res://.godot/imported/tile004.png-614fdd065332939aa21c2b8c94382872.ctex"]
 
 [params]
 
