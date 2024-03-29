@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fjdrbp0u2ysk"
-path="res://.godot/imported/Idle.png-5ad0bec20daa5ead4499c7b6c394ffdc.ctex"
+uid="uid://dieya0ja68yuo"
+path="res://.godot/imported/tile003.png.PNG-e87de5bfb60ce2f0eb56c440a294fb68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animation_sprites/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-5ad0bec20daa5ead4499c7b6c394ffdc.ctex"]
+source_file="res://sprites/animation_sprites/run/tile003.png.PNG"
+dest_files=["res://.godot/imported/tile003.png.PNG-e87de5bfb60ce2f0eb56c440a294fb68.ctex"]
 
 [params]
 

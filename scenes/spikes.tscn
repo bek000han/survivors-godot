@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxnhpl8veukc5"]
+
+[ext_resource type="Texture2D" uid="uid://b0wqos5f18s1j" path="res://sprites/static_sprites/4 Conjoined Wooden Spikes.png" id="1_jvhj2"]
+[ext_resource type="PackedScene" uid="uid://b6rm681u0g7py" path="res://scenes/hazard_area.tscn" id="2_lt2h1"]
+
+[node name="Spikes" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6.5125, -5.5)
+scale = Vector2(0.316463, 0.611111)
+texture = ExtResource("1_jvhj2")
+
+[node name="HazardArea" parent="." instance=ExtResource("2_lt2h1")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HazardArea"]
+polygon = PackedVector2Array(0.256933, -0.0341663, 0.30654, -8.11999, 1.39788, -9.65778, 2.46441, -8.39282, 2.56363, -0.0341663)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="HazardArea"]
+position = Vector2(5.21966, 0.0264859)
+polygon = PackedVector2Array(0.256933, -0.0341663, 0.30654, -8.11999, 1.39788, -9.65778, 2.46441, -8.39282, 2.56363, -0.0341663)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="HazardArea"]
+position = Vector2(7.71693, 0)
+polygon = PackedVector2Array(0.256933, -0.0341663, 0.30654, -8.11999, 1.39788, -9.65778, 2.46441, -8.39282, 2.56363, -0.0341663)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="HazardArea"]
+position = Vector2(10.2425, 0.0350761)
+polygon = PackedVector2Array(0.256933, -0.0341663, 0.30654, -8.11999, 1.39788, -9.65778, 2.46441, -8.39282, 2.56363, -0.0341663)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="HazardArea"]
+position = Vector2(2.63077, 0)
+polygon = PackedVector2Array(0.256933, -0.0341663, 0.30654, -8.11999, 1.39788, -9.65778, 2.46441, -8.39282, 2.56363, -0.0341663)

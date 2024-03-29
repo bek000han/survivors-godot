@@ -9,3 +9,4 @@ extends Resource
 @export var air_resistance = 200.0
 @export var air_acceleration = 400.0
 @export var can_air_jump = false
+@export var can_wall_jump = false
