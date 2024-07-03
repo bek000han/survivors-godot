@@ -1,7 +1,7 @@
 [gd_scene load_steps=30 format=3 uid="uid://dj4dou04w1bse"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_8mjn4"]
-[ext_resource type="Resource" uid="uid://0uq4tjd0u5hd" path="res://scripts/resources/DefaultMovement.tres" id="2_n1mpo"]
+[ext_resource type="Script" path="res://scripts/gameplay/player.gd" id="1_8mjn4"]
+[ext_resource type="Resource" uid="uid://0uq4tjd0u5hd" path="res://scripts/resources/player/DefaultMovement.tres" id="2_6uky5"]
 [ext_resource type="Texture2D" uid="uid://chy7vhwc8mk1c" path="res://sprites/animation_sprites/idle/tile000.png.PNG" id="3_5pba2"]
 [ext_resource type="Texture2D" uid="uid://bx0upwrqjtu5p" path="res://sprites/animation_sprites/jump/tile000.png" id="3_cgdwq"]
 [ext_resource type="Texture2D" uid="uid://dptp6iup0h4c5" path="res://sprites/animation_sprites/attack1/tile000.png.png" id="3_e587x"]
@@ -148,11 +148,11 @@ size = Vector2(11.9448, 47.0325)
 scale = Vector2(1.175, 1.175)
 collision_layer = 2
 script = ExtResource("1_8mjn4")
-movement_data = ExtResource("2_n1mpo")
+movement_data = ExtResource("2_6uky5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-5.10638, -7.65958)
-texture = ExtResource("21_h680g")
+texture = ExtResource("3_e587x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-9.3617, -7.44681)

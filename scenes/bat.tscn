@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://stq2cft36mcb"]
+
+[ext_resource type="Texture2D" uid="uid://8g1sx7tdl4t0" path="res://sprites/enemy/bat/bat_enemy.png" id="1_e5yn8"]
+[ext_resource type="Script" path="res://scenes/bat.gd" id="1_h0np8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n45rw"]
+radius = 7.0
+height = 14.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7u4g"]
+size = Vector2(4, 14)
+
+[sub_resource type="Animation" id="Animation_kxg7a"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lg56n"]
+_data = {
+"idle": SubResource("Animation_kxg7a")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_h0np8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.52588e-05, 7.62939e-06)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("1_e5yn8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_n45rw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_w7u4g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lg56n")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5

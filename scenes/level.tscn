@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvbrwgarmes7q"]
+[gd_scene load_steps=6 format=3 uid="uid://cvbrwgarmes7q"]
 
-[ext_resource type="Script" path="res://scripts/level.gd" id="1_tv4a8"]
+[ext_resource type="Script" path="res://scripts/gameplay/level.gd" id="1_tv4a8"]
 [ext_resource type="PackedScene" uid="uid://dj4dou04w1bse" path="res://scenes/player.tscn" id="2_g1j4n"]
 [ext_resource type="PackedScene" uid="uid://cxnhpl8veukc5" path="res://scenes/spikes.tscn" id="3_jcrv7"]
+[ext_resource type="PackedScene" uid="uid://stq2cft36mcb" path="res://scenes/bat.tscn" id="4_e64a0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lwee8"]
 size = Vector2(16, 56)
@@ -23,6 +24,7 @@ position = Vector2(33.97, 104.775)
 scale = Vector2(0.295, 0.295)
 floor_constant_speed = true
 floor_snap_length = 3.0
+jumping = false
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 collision_mask = 0
@@ -48,3 +50,6 @@ position = Vector2(145, 144)
 
 [node name="Spikes4" parent="." instance=ExtResource("3_jcrv7")]
 position = Vector2(155, 144)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_e64a0")]
+position = Vector2(180, 109)

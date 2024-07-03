@@ -1,20 +1,16 @@
 extends CharacterBody2D
 
 @export var movement_data : PlayerMovementData
-@export var attacking = false
 @export var jumping = false
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var air_jump = false
+var health = 100
 
 @onready var sprite_2d = $Sprite2D
 @onready var animated_sprite_2d = $AnimationPlayer
 @onready var coyote_jump_timer = $CoyoteJumpTimer
 @onready var start_pos = global_position
-
-func _process(delta):
-	if Input.is_action_just_pressed("attack1")  and is_on_floor():
-		attack()
 
 func _physics_process(delta):
 	apply_gravity(delta)
@@ -27,7 +23,7 @@ func _physics_process(delta):
 	apply_air_resistance(input_axis, delta)
 	update_animations(input_axis)
 	var was_on_floor = is_on_floor()
-	if !attacking: move_and_slide()
+	move_and_slide()
 	
 	var just_left_ledge = was_on_floor and not is_on_floor() and velocity.y >= 0
 	if (just_left_ledge):
@@ -96,21 +92,20 @@ func apply_air_resistance(input_axis, delta):
 	if input_axis == 0 and not is_on_floor():
 		velocity.x = move_toward(velocity.x, 0, movement_data.air_resistance * delta)
 
-func attack():
-	attacking = true
-	animated_sprite_2d.play("Attack1")
+
 
 func update_animations(input_axis):
-	if !attacking:
-		if input_axis != 0:
-			animated_sprite_2d.play("Run")
-		else:
-			animated_sprite_2d.play("Idle")
-		
-		if not is_on_floor() and velocity.y < 0:
-			animated_sprite_2d.play("Jump")
-		if not is_on_floor() and velocity.y > 0:
-			animated_sprite_2d.play("Fall")
+	if input_axis != 0:
+		animated_sprite_2d.play("Run")
+	else:
+		animated_sprite_2d.play("Idle")
+	
+	if not is_on_floor() and velocity.y < 0:
+		animated_sprite_2d.play("Jump")
+	if not is_on_floor() and velocity.y > 0:
+		animated_sprite_2d.play("Fall")
 
 func _on_hazard_detector_area_entered(area):
 	global_position = start_pos
+	health -= 10
+	print(health)
